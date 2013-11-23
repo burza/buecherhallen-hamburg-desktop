@@ -1,0 +1,85 @@
+$font-size-default: 14px;
+$font-size-big: 16px;
+
+$font-size-mid: 1em;
+
+$line-height: 1.125em;
+
+@mixin one-line-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body {
+  color: $font-color;
+  font-family: Arial, sans-serif;
+  font-size: $font-size-default;
+  line-height: $line-height;
+  -webkit-font-smoothing: subpixel-antialiased !important; 
+  -webkit-backface-visibility: hidden; 
+  -moz-backface-visibility: hidden; 
+  -ms-backface-visibility: hidden;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &.dotted-list li {
+    list-style: disc;
+    list-style-position: inside;
+    line-height: 1.5em;
+  }
+}
+
+p {
+  font-size: 1em;
+  margin-bottom: 2em;
+  line-height: 1.3em;
+}
+a {
+  font-size: 1em;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin h1 {
+}
+
+@mixin h2 {
+  font-size: 2em;
+  line-height: 1.3em;
+  margin-bottom: 1em;  
+  text-transform: uppercase;
+}
+
+@mixin h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+
+@mixin h4 {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}

@@ -1,0 +1,48 @@
+doctype html
+html lang="de"
+  head
+    title
+      | {{ page.title }}
+    meta name="keywords" content=""
+    meta name="description" content=""
+    meta name="HandheldFriendly" content="True"
+    meta name="MobileOptimized" content="320"
+    meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+
+    meta name="og:title" content="{{ page.title }}"
+    meta name="og:type" content="website"
+    meta name="og:url" content="url"
+    meta name="og:description" content="desc"
+    meta name="og:image" content="/assets/img/large.png"
+
+    meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+
+    link rel="apple-touch-icon" href="touch-icon-iphone.png"
+    link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png"
+    link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png"
+    link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png"
+
+    link rel="image_src" href="/assets/img/large.png"
+
+    link rel="shortcut icon" href="/assets/img/favicon.png"
+    | {% stylesheet style %}
+
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      | {% javascript ie_lte9 %}
+    /[if IE 7]
+      | {% stylesheet font-awesome-ie7 %}
+    /[if IE]
+      css:
+        body {
+          font-size:16px;
+        }
+    | {% javascript application %}
+
+
+  body id="{{ page.id }}" data-current-page="{{ page.id }}"
+    / Wrap all page content here
+    #wrap
+      / Begin page content
+      | {{ content }}
+

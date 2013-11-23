@@ -1,0 +1,47 @@
+
+.nowrap {
+  white-space: nowrap;
+}
+
+
+// This is used to hide and obfuscate email adresses on the page
+.contact {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  text-align: left;
+}
+
+.btn {
+  @include transition(.25s);
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  display: inline-block;
+  color: white;
+  position: relative;
+  font-weight: 400;
+  &:hover {
+    color: white;
+    background: $link-color-hover;
+  }
+}
+.btn-store {
+  padding-left: 2em;
+  margin: 1em .750em;
+  min-width: 200px;
+  > i.fa {
+    position: absolute;
+    top: 0.10em;
+    left: 0.2em;
+    font-size: 1.7em;
+  }
+}
+.btn-store.btn-apple {
+  > i.fa {
+    position: absolute;
+    top: 0.05em;
+    left: 0.29em;
+    font-size: 2em;    
+  }
+}
