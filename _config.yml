@@ -1,4 +1,4 @@
-name: Your New Jekyll Site
+name: Buecherhallen Hamburg
 markdown: redcarpet
 pygments: true
 
@@ -8,6 +8,7 @@ exclude:
   - Procfile
   - README.md
   - tasks
+  - vendor
 
 # defaults
 # sass:
