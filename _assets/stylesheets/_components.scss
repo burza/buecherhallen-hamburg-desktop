@@ -21,6 +21,7 @@
   color: white;
   position: relative;
   font-weight: 400;
+  padding: .3em .5em;
   &:hover {
     color: white;
     background: $link-color-hover;
@@ -28,6 +29,7 @@
 }
 .btn-store {
   padding-left: 2em;
+  padding-right: .5em;
   margin: 1em .750em;
   min-width: 200px;
   > i.icon {
