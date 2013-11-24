@@ -11,10 +11,11 @@
 @import 'layout';
 @import 'components';
 
-
+body {
+  background-color: $blue;
+}
 // BOOTSTRAP OVERRIDES
 section.slogan {
-  font-size: $font-size-default;
   background: {
     image: url('/assets/img/mood_bg.png');
     position: top center;
@@ -25,9 +26,9 @@ section.slogan {
     margin: 100px 0;
     color: white;
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 2em;
     line-height: 1em;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     > span {
       font-size: .625em;
       font-weight: 400;
@@ -41,6 +42,7 @@ section.stores {
   position: relative;
   padding-top: 2em;
   padding-bottom: 2em;
+  > .container > .row { position: relative; }
   .store-buttons {
     text-align: center;
   }
@@ -48,32 +50,53 @@ section.stores {
     max-width: 100%;
   }
 }
-
+section.features {
+  background: white;
+  padding: 2em 0;
+}
+section.socialmedia {
+  background: $blue;
+  text-align: center;
+  position:relative;
+  .brand {
+    position: initial;
+    margin: 2em 2em 4em;
+    display: block;
+  }
+  .btn {
+    margin: 2em 0;
+  }
+}
 
 
 // Small devices (tablets, 768px and up)
 @media (min-width: $screen-sm) {
+  body {
+    font-size: $font-size-big;
+  }
   section.slogan {
     h1 {
-      margin: 10% 0 10%;
-      font-size: 2em;
+      font-size: 1.25em;
+      line-height: 1em;
+      margin: 50% 0 50%;
+      letter-spacing: 2px;
     }
   }
   section.stores {
     min-height: 200px;
     .store-buttons {
-      padding-top: 2em;
       position: absolute;
-      bottom: 6em;
+      top: 2em;
       right: 0;
+      padding: 0;
     }
     .app-preview {
-      margin-top: 0px;
-      max-width: 125%;
-      margin-left: -45px;
+      margin-top: -350px;
+      max-width: 135%;
+      margin-left: -60px;
     }
     .btn.btn-store {
-      font-size: 1em;
+      font-size: .9em;
       margin-right: 0;
       min-width: 160px;
     }
@@ -84,33 +107,47 @@ section.stores {
       top: 0.10em;
     }
   }
+  section.socialmedia {
+    padding-bottom: 2em;
+    .brand {
+      position: absolute;
+      top: 2em;
+      left: 0;
+      margin: 0;
+      > img {
+        width: 75%;
+      }
+    }
+  }
 }
 
 // Medium devices (desktops, 992px and up)
 @media (min-width: $screen-md) {
   section.slogan {
     h1 {
-      margin: 300px 0 200px;
-      font-size: 2em;
+      margin: 250px 0 200px;
+      font-size: 1.75em;
     }
   }
   section.stores {
     min-height: 200px;
     .store-buttons {
       padding-top: 0em;
+      position: initial;
     }
     .app-preview {
-      margin-top: -420px;
-      max-width: 115%;
+      margin-top: -470px;
+      max-width: 130%;
+      margin-left: -70px;
     }
     .btn.btn-store {
-      font-size: 1.3em;
+      font-size: 1.2em;
     }
     .btn-store>i.fa {
-      top: 0.10em;
+      top: 0.08em;
     }
     .btn-store.btn-apple>i.fa {
-      top: 0.05em;
+      top: 0.02em;
     }
   }
 }
@@ -120,7 +157,7 @@ section.stores {
   section.slogan {
     h1 {
       margin: 370px 0 250px;
-      font-size: 2.5em;
+      font-size: 2.2em;
     }
   }
   
@@ -130,12 +167,19 @@ section.stores {
     }
     .app-preview {
       margin-top: -585px;
-      max-width: 130%;
-      margin-left: -70px;
     }
     .btn.btn-store {
-      font-size: 1.5em;
+      font-size: 1.4em;
       margin-left: 1.5em;
+    }
+  }
+  section.socialmedia {
+    .btn {
+      margin: 2em 0 4em;
+    }
+    .brand {
+      position: absolute;
+      left: 0;
     }
   }
 }
