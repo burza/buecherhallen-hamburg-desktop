@@ -5,8 +5,8 @@
 @import 'colors.lib';
 @import 'bootstrap';
 
-@import 'font-awesome';
 @import 'typo.lib';
+@import 'icons';
 
 @import 'layout';
 @import 'components';
@@ -17,7 +17,7 @@ body {
 // BOOTSTRAP OVERRIDES
 section.slogan {
   background: {
-    image: url('/assets/img/mood_bg.png');
+    image: url('/assets/img/mood_bg.jpg');
     position: top center;
     size: cover;
     repeat: no-repeat;
@@ -100,10 +100,10 @@ section.socialmedia {
       margin-right: 0;
       min-width: 160px;
     }
-    .btn-store>i.fa {
+    .btn-store>i.icon {
       top: 0.15em;
     }
-    .btn-store.btn-apple>i.fa {
+    .btn-store.btn-apple>i.icon {
       top: 0.10em;
     }
   }
@@ -143,10 +143,10 @@ section.socialmedia {
     .btn.btn-store {
       font-size: 1.2em;
     }
-    .btn-store>i.fa {
+    .btn-store>i.icon {
       top: 0.08em;
     }
-    .btn-store.btn-apple>i.fa {
+    .btn-store.btn-apple>i.icon {
       top: 0.02em;
     }
   }
