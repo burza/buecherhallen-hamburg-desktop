@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby '2.0.0'
 
 gem 'jekyll-sass', '~> 1.1.0'
 gem 'jekyll-slim', '~> 0.8.2'
