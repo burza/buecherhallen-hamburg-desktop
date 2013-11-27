@@ -14,19 +14,13 @@
 body {
   background-color: $blue;
 }
-// BOOTSTRAP OVERRIDES
 section.slogan {
-  background: {
-    image: url('/assets/img/mood_bg.jpg');
-    position: top center;
-    size: cover;
-    repeat: no-repeat;
-  }
+  background-color: $blue;
   h1 {
-    margin: 100px 0;
+    margin: 2em 0 0;
     color: white;
     text-transform: uppercase;
-    font-size: 2em;
+    font-size: 1.8em;
     line-height: 1em;
     letter-spacing: 1px;
     > span {
@@ -58,10 +52,16 @@ section.socialmedia {
   background: $blue;
   text-align: center;
   position:relative;
-  .brand {
+  .brand, .imprint {
     position: initial;
     margin: 2em 2em 4em;
     display: block;
+  }
+  a.imprint {
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .btn {
     margin: 2em 0;
@@ -75,6 +75,12 @@ section.socialmedia {
     font-size: $font-size-big;
   }
   section.slogan {
+    background: {
+      image: url('/assets/img/mood_bg.jpg');
+      position: top center;
+      size: cover;
+      repeat: no-repeat;
+    }
     h1 {
       font-size: 1.25em;
       line-height: 1em;
@@ -112,6 +118,11 @@ section.socialmedia {
       left: 0;
       margin: 0;
     }
+    .imprint {
+      position: absolute;
+      top: 2.7em;
+      right: 0;
+    }
     .btn {
       margin: 2.5em 0 4em;
     }
@@ -123,7 +134,7 @@ section.socialmedia {
   section.slogan {
     h1 {
       margin: 250px 0 200px;
-      font-size: 1.75em;
+      font-size: 1.70em;
     }
   }
   section.stores {
